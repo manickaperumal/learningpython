@@ -1,0 +1,119 @@
+pgm:
+
+		def dictionary():
+		    keyvalue={}
+		    keyvalue[2]=56
+		    keyvalue[1]=2
+		    keyvalue[5]=12
+		    keyvalue[4]=24
+		    keyvalue[6]=18
+		    keyvalue[3]=323
+		    print(keyvalue)
+
+		    for i in sorted(keyvalue.keys()):
+			print(i,end=" ")
+
+		dictionary()
+		
+output:
+
+		{2: 56, 1: 2, 5: 12, 4: 24, 6: 18, 3: 323}
+		
+		1 2 3 4 5 6 
+		
+		
+pgm:
+
+		d={"name":"manic","age":21,"degree":"Bsc","sports":None}
+		for i in sorted(d.keys()):
+		    print(i,end=" ")
+
+
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/projects/realpython/regex_handling.py
+		age degree name sports manikam@manikam:~/projects/realpython$ 
+
+
+pgm:
+
+		def dictionary():
+			keyvalue={}
+			keyvalue[2]=56
+			keyvalue[1]=2
+			keyvalue[5]=12
+			keyvalue[4]=24
+			keyvalue[6]=18
+			keyvalue[3]=323
+			# print(keyvalue)
+
+			for i in sorted(keyvalue):
+			  print((i,keyvalue[i]),end=" ")
+
+		dictionary()
+		
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/projects/realpython/regex_handling.py
+		(1, 2) (2, 56) (3, 323) (4, 24) (5, 12) (6, 18)
+
+							# sort value 
+
+pgm:
+
+		def dictionary():
+			keyvalue={}
+			keyvalue[2]=56
+			keyvalue[1]=2
+			keyvalue[5]=12
+			keyvalue[4]=24
+			keyvalue[6]=18
+			keyvalue[3]=323
+			# print(keyvalue)
+
+			print(sorted(keyvalue.items(),key=lambda kv:(kv[1],kv[0]))) 
+			 
+
+		dictionary()
+		
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/projects/realpython/regex_handling.py
+		[(1, 2), (5, 12), (6, 18), (4, 24), (2, 56), (3, 323)]
+		manikam@manikam:~/projects/realpython$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
