@@ -1,0 +1,98 @@
+pgm:
+
+
+		import sqlite3
+		connection=sqlite3.connect("/home/manikam/pyy/sample.db")
+		cursor=connection.cursor()
+		sql_command="""
+			     CREATE TABLE
+			      STUDENT(
+			     rollno INTEGER PRIMARY KEY,
+			     sname VARCHAR(20),
+			     grade CHAR(1),
+			     gender CHAR(1),
+			     average DECIMAL(5,2),
+			     birth_date DATE    
+			     );"""
+
+		cursor.execute(sql_command)
+		sql_command="""
+			    INSERT INTO
+			    student(rollno,sname,grade,gender,average,birth_date)
+			    VALUES(null,"manic",'B','M',"87.8","2001-12-12");"""      
+		cursor.execute(sql_command)
+		connection.commit()
+		print("student table created")
+		
+pgm:
+
+try:
+        
+    import sqlite3
+    connection=sqlite3.connect("/home/manikam/pyy/sample.db")
+    cursor=connection.cursor()
+    sql_command="""
+                CREATE TABLE STUDENT(
+                rollno INTEGER PRIMARY KEY,
+                sname VARCHAR(20),
+                grade CHAR(1),
+                gender CHAR(1),
+                average DECIMAL(5,2),
+                birth_date DATE,   
+                );"""
+
+    cursor.execute(sql_command)
+    sql_command="""
+                INSERT INTO
+                student(rollno,sname,grade,gender,average,birth_date)
+                VALUES(null,"manic",'B','M',"87.8","2001-12-12");"""      
+    cursor.execute(sql_command)
+    connection.commit()
+    print("student table created")
+
+except:
+    connection.rollback()
+    print("wrong")
+    
+output:
+
+wrong 
+
+
+pgm:
+
+import sqlite3
+connection=sqlite3.connect("/home/manikam/5.db")
+crsr=connection.cursor()
+query='''
+        CREATE TABLE
+        mr(
+        name varchar(20),
+        salary INTEGER,
+        id INTEGER PRIMARY KEY,
+        gender char(1));
+'''
+crsr.execute(query)
+query='''
+        INSERT INTO mr
+        (name,salary,id,gender)
+        VALUES("kavin","15000",null,"M");
+'''
+crsr.execute(query)
+connection.commit()
+print("done")
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
