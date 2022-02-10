@@ -1,0 +1,80 @@
+pgm:
+
+
+
+		import json
+		student='''
+		{"name":"manic",
+		"age":21,
+		"clg":"kamaraj",
+		"dis":"tuty",
+		"parent":{"father":"kaliraj","mother":"rajammal"}
+		}
+
+		'''
+
+		with open ("/home/manikam/today.json","r")as js:
+			dict=json.load(js)
+			print(dict)
+			print(dict["parent"])
+			print(dict["parent"]["father"])
+			
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/projects/realpython/regex_handling.py
+		{'name': 'manic', 'age': 21, 'clg': 'kamaraj', 'dis': 'tuty', 'parent': {'father': 'kaliraj', 'mother': 'rajammal'}}
+		{'father': 'kaliraj', 'mother': 'rajammal'}
+		kaliraj
+		manikam@manikam:~/projects/realpython$ 
+		
+		
+pgm:
+
+		import json
+		student='''
+		{
+		"name":"perumal",
+		"grade":"a",
+		"sports":false,
+		"certificate":null
+
+		}
+		'''
+
+		with open("/home/manikam/today2.json","r")as js:
+			dict=json.load(js)
+
+			print(dict)
+			print(type(dict))
+						
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/projects/realpython/regex_handling.py
+		{'name': 'perumal', 'grade': 'a', 'sports': False, 'certificate': None}
+		<class 'dict'>
+			
+			
+pgm:
+
+		import json
+		manickam='''
+		{
+		"dob":"22-02-2000",
+		"qualfication":"Bsc",
+		"address":"new colony"
+		}	
+		'''
+		with open("/home/manikam/today3.json","r")as js:
+			dict=json.load(js)
+			print(dict)
+			print(dict["qualfication"])
+			print(type(dict))
+	
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/projects/realpython/regex_handling.py
+		{'dob': '22-02-2000', 'qualfication': 'Bsc', 'address': 'new colony'}
+		Bsc
+		<class 'dict'>
+
+				
