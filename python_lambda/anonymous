@@ -1,0 +1,11 @@
+pgm:
+
+		squareofnumber=lambda num:num*num
+		print(squareofnumber(5))
+
+output:
+
+		25
+		
+	
+	

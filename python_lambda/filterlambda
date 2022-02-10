@@ -1,0 +1,129 @@
+intro:
+
+	multiple values ulla oru list,set,tuple,dictionary athula ulla values lam filter panni eduka use panrom
+
+
+
+syntax:
+
+	filter(function,sequence)
+
+
+
+
+
+
+pgm:
+
+		mylist=[12,65,54,39,102,339,21,50,70]
+		result=list(filter(lambda x : (x%13==0),mylist))
+		print(result)
+		
+		
+output:
+
+		[65,39]
+		
+pgm:
+
+		l=[20,30,40,55,66]
+		mylist=list(filter(lambda x:x%2==0,l))
+		print(mylist)
+		
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/pyy/class_dict_handle.py
+		[20, 30, 40, 66]
+		manikam@manikam:~/pro
+				
+pgm:
+
+                                #given a list of strings ,find all palindroms
+
+
+		mylist=["geeks","geeg","keek","practice","aa"]
+		result=list(filter(lambda x: (x == "".join(reversed(x))),mylist))
+		print(result)
+		
+output:
+
+			['geeg', 'keek', 'aa']
+			
+			
+			
+pgm:
+
+		l=[0,5,10,15,20,25,30]
+		print(list(filter(lambda x: x%2==0,l)))
+		print(list(filter(lambda y :y%2!=0,l)))	
+		
+output:
+
+		[0, 10, 20, 30]
+		[5, 15, 25]		
+				
+
+pgm:
+
+		l=(0,5,10,15,20,25,30)
+		print(tuple(filter(lambda x: x%2==0,l)))
+		print(tuple(filter(lambda y :y%2!=0,l)))
+
+output:
+
+		(0, 10, 20, 30)
+		(5, 15, 25)	
+			
+
+pgm:
+
+		l={0,5,10,15,20,25,30}
+		print(set(filter(lambda x: x%2==0,l)))
+		print(list(filter(lambda y :y%2!=0,l)))
+
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/pyy/sample.py
+		{0, 10, 20, 30}
+		[5, 15, 25]
+			
+			
+pgm:
+
+		my_dict={8:"u",9:"z",3:"s",10:"j"}
+		new_filt=dict(filter(lambda val:val[0]%3==0,my_dict.items()))
+		print(new_filt)		
+			
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/pyy/sample.py
+		{9: 'z', 3: 's'}
+					
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

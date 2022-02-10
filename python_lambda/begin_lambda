@@ -1,0 +1,95 @@
+
+pgm:
+
+		x=lambda a:a+10
+		print(x(5))
+
+output:
+
+		15
+		
+		
+		
+pgm:
+
+		x=lambda a,b:a+b
+		print(x(5,6))
+		
+output:
+
+	11
+	
+	
+phm:
+
+		x=lambda a,b,c:a+b+c
+		print(x(5,6,7))
+		
+output:
+
+		18
+		
+		
+pgm:
+
+		print("the biggest of 10,20 is",(lambda a,b:a if a>b else b)(10,20))
+		print("the biggest of 100,200 is",(lambda a,b: a if a>b else b)(100,200))
+		print("the 10 power 3 is",(lambda x:x*x*x)(10))
+		print("the square no is",(lambda a:a*a)(5))
+		
+                print((lambda name: "yes" if "a" in name else "no ")("manic"))
+		
+output:
+
+		the biggest of 10,20 is 20
+		the biggest of 100,200 is 200
+		the 10 power 3 is 1000
+		the square no is 25
+		yes
+		
+		
+pgm:
+
+		for i in range(1,11):
+		    print((lambda i:i*5)(i))
+
+output:
+
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
