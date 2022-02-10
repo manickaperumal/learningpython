@@ -1,0 +1,25 @@
+pgm:
+
+
+		import requests
+		from bs4 import BeautifulSoup
+		url="https://en.wikipedia.org/wiki/Main_Page"
+		page=requests.get(url=url)
+		# print(page)
+		# print(page.text)
+
+		soup=BeautifulSoup(page.text,'html.parser')
+		print(soup.prettify)
+		
+pgm:
+
+		import requests
+		from bs4 import BeautifulSoup
+		url="https://www.thehindu.com/"
+		response=requests.get(url=url)
+		soup=BeautifulSoup(response.text,"html.parser")
+		print(soup.prettify)
+		
+learn:
+
+	it will help to read a html code of that webpage
