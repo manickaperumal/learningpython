@@ -1,0 +1,11 @@
+pgm:
+
+		from operator import itemgetter
+		l=[{"name":"manic","age":27},{"name":"aswin","age":23},{"name":"perumal","age":25}]
+		sorted_list=sorted(l,key=itemgetter("age"))
+		print(sorted_list)
+
+
+output:
+
+		[{'name': 'aswin', 'age': 23}, {'name': 'perumal', 'age': 25}, {'name': 'manic', 'age': 27}]  
