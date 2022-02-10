@@ -1,0 +1,69 @@
+pgm
+
+
+		models = [{'make':'Nokia', 'model':216, 'color':'Black'}, {'make':'Mi Max', 'model':'2', 'color':'Gold'}, {'make':'Samsung', 'model': 7, 'color':'Blue'}]
+		# print(models)
+		sorted_models = sorted(models, key = lambda x: x['color'])
+		print(sorted_models)
+
+
+output:
+
+		nikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/pyy/sample.py
+		[{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}, {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}]
+		manikam@manikam:~/projects/realpython$ 
+		
+		
+		
+pgm:
+
+		l=[{"name":"manic","age":22},{"name":"aswin","age":23},{"name":"balan","age":25}]
+		sorted_modesl=sorted(l,key=lambda x:x['name'])
+		print(sorted_modesl)
+		
+output:
+
+		[{'name': 'aswin', 'age': 23}, {'name': 'balan', 'age': 25}, {'name': 'manic', 'age': 22}]
+		manikam@manikam:~/projects/realpython$ 
+		
+		
+
+
+pgm:
+
+
+
+		l=[{"name":"manic","age":22},{"name":"aswin","age":23},{"name":"balan","age":25}]
+		sorted_modesl=sorted(l,key=lambda x:x['name'],reverse=True)
+		print(sorted_modesl)
+
+
+output:
+
+		[{'name': 'manic', 'age': 22}, {'name': 'balan', 'age': 25}, {'name': 'aswin', 'age': 23}]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
+
+
+
