@@ -1,0 +1,17 @@
+pgm:
+
+		import csv
+		field=["name","profession","std","age"]
+		dict=[{"name":"manic","age":21,"std":"clg","profession":"programmer"},{"name":"perumal","age":"22","std":"clg","profession":"mechanic"}]
+		with open("/home/manikam/myproject.csv","w")as csvfile:
+		    writer=csv.DictWriter(csvfile,fieldnames=field)
+		    writer.writeheader()
+		    writer.writerows(dict)
+
+
+output:
+
+	name	profession	std	age
+	manic	programmer	clg	21
+	perumalmechanic	clg	22
+

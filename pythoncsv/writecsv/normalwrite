@@ -1,0 +1,19 @@
+pgm:
+
+		import csv
+		fiels=["name","branch","year","cgpa"]
+		rows=[["manic","cde","2","9.0"],["perumal","se","3","9.1"],["hari","coe","1","7.8"]]
+		with open("/home/manikam/practical.csv","w")as csvfile:
+		    writer=csv.writer(csvfile)
+		    writer.writerow(fiels)
+		    writer.writerows(rows)
+		    
+output:
+
+name	branch	year	cgpa
+manic	cde	2	9
+perumal se	3	9.1
+hari	coe	1	7.8
+
+
+

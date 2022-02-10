@@ -1,0 +1,30 @@
+program:
+
+		import csv
+		fields=[]
+		rows=[]
+		with open("/home/manikam/myproject.csv","r")as csvfile:
+		    
+		    csvreader=csv.reader(csvfile)
+		    fields=next(csvreader)
+		    for i in csvreader:
+			print("i ---->",i)
+			rows.append(i)
+
+		print(rows)
+		print("main part")
+		for row in rows:
+		    for col in row:
+			print(col,end=" ")
+		    print()
+		    
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/pyy/class_dict_handle.py
+		i ----> ['manic', 'programmer', 'clg', '21']
+		i ----> ['perumal', 'mechanic', 'clg', '22']
+		[['manic', 'programmer', 'clg', '21'], ['perumal', 'mechanic', 'clg', '22']]
+		main part
+		manic programmer clg 21 
+		perumal mechanic clg 22 
+		manikam@manikam:~/proje
