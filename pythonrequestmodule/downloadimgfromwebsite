@@ -1,0 +1,29 @@
+pgm:
+
+		import requests
+		myurl="https://spaceplace.nasa.gov/gallery-sun/en/solar-flare.en.jpg"
+		header={
+
+		    'User-Agent':"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0"
+		}
+
+		response=requests.get(url=myurl,headers=header)
+		img=response.content
+
+		with open("/home/manikam/sun.jpg","wb")as sun:
+		    sun.write(img)
+		    
+output:
+
+	the sun.jpg photo was downloaded in that location
+	
+pgm:
+
+		import requests
+		res=requests.get("https://pbs.twimg.com/media/Ehj6SxqU8AEeTQM.jpg")
+		te=res.content
+
+		with  open("/home/manikam/raja.jpg","wb")as w:
+			w.write(te)
+
+

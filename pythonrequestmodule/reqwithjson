@@ -1,0 +1,80 @@
+
+
+
+
+
+
+
+response.json()	response.json() returns a JSON object of the result (if the result was written in JSON format, if not it raises     
+                        an error).
+
+
+
+
+
+
+
+pgm:
+
+import requests
+from requests.exceptions import HTTPError
+
+try:
+    response = requests.get('https://httpbin.org/get')
+    response.raise_for_status()
+    # access JSOn content
+    jsonResponse = response.json()
+    print("Entire JSON response")
+    print(jsonResponse)
+
+except HTTPError as http_err:
+    print(f'HTTP error occurred: {http_err}')
+except Exception as err:
+    print(f'Other error occurred: {err}')
+    
+    
+output:
+
+manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/pyy/test.py
+Entire JSON response
+{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.22.0', 'X-Amzn-Trace-Id': 'Root=1-62020322-555be1644a6becb7217d0fe9'}, 'origin': '157.46.126.13', 'url': 'https://httpbin.org/get'}
+manikam@manikam:~/projects/realpython$ 
+
+
+
+pgm:
+
+
+import requests
+from requests.exceptions import HTTPError
+
+try:
+    response = requests.get('https://httpbin.org/get')
+    response.raise_for_status()
+    # access JSOn content
+    jsonResponse = response.json()
+    print("Entire JSON response")
+    # print(jsonResponse)
+
+except HTTPError as http_err:
+  print(f'HTTP error occurred: {http_err}')
+except Exception as err:
+  print(f'Other error occurred: {err}')
+
+  
+for key,value in jsonResponse.items():
+  print(key ,":",value)
+
+
+output:
+
+Entire JSON response
+args : {}
+headers : {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.22.0', 'X-Amzn-Trace-Id': 'Root=1-620205e8-08774d9a5029930016f60fe0'}
+origin : 157.46.126.13
+url : https://httpbin.org/get
+manikam@manikam:~/projects/realpython$
+
+
+
+

@@ -1,0 +1,209 @@
+pgm:
+
+		import requests
+		myurl="https://www.thehindu.com/news/"
+		response=requests.get(url=myurl)
+		print(response)
+		
+output:
+
+	<Response [200]>
+
+
+pgm:
+
+		import requests
+		myurl="https://www.thehindu.com/news/"
+		response=requests.get(url=myurl)
+		print(response)
+		print(dir(response))
+		
+output:
+
+	<Response [200]>
+	['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__enter__', '__eq__', '__exit__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+	
+program:
+
+	import requests
+	myurl="https://www.thehindu.com/news/"
+	response=requests.get(url=myurl)
+	print(response.status_code)
+	
+output:
+
+manikam@manikam:~/pyy$ python3 class_dict_handle.py 
+200
+
+program:
+
+		import requests
+		myurl="https://www.thehindu.com/news/"
+		response=requests.get(url=myurl)
+		print(response.headers)
+
+
+
+output:
+
+		manikam@manikam:~/pyy$ python3 class_dict_handle.py 
+		{'Date': 'Sun, 06 Feb 2022 06:56:53 GMT', 'Content-Type': 'text/html;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'Last-Modified': 'Sun, 06 Feb 2022 06:51:38 GMT', 'Cache-Control': 'max-age=300', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'no-referrer-when-downgrade', 'Age': '13', 'Access-Control-Expose-Headers': 'Content-Length, Content-Range', 'X-Cache': 'MISS', 'X-Cache-Hits': '0', 'CF-Cache-Status': 'HIT', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Server': 'cloudflare', 'CF-RAY': '6d927b2d19ae6ed7-BOM', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'}
+
+
+program:
+		import requests
+		myurl="https://www.thehindu.com/news/"
+		response=requests.get(url=myurl)
+		print(response.request.headers)
+
+output:
+
+	nikam@manikam:~/pyy$ python3 class_dict_handle.py 
+	{'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+program:
+
+		import requests
+		myurl="https://www.thehindu.com/news/"
+		header={
+
+		    'User-Agent':"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0"
+		}
+
+		response=requests.get(url=myurl,headers=header)
+		print(response.request.headers)
+
+
+
+output:
+
+		{'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+		manikam@manikam:~/pyy$ 
+		
+		
+		
+program:
+
+		import requests
+		myurl="https://www.thehindu.com/news/"
+		header={
+
+		    'User-Agent':"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0"
+		}
+
+		response=requests.get(url=myurl,headers=header)
+		print(response.content)
+
+
+output:
+
+	it will print a whole content in html code
+	
+	
+program:
+
+		import requests
+		myurl="https://www.thehindu.com/news/"
+		header={
+
+		    'User-Agent':"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0"
+		}
+
+		response=requests.get(url=myurl,headers=header)
+		print(type(response.content))
+		
+output:
+
+		class 'bytes'>
+
+program:
+
+		import requests
+		url="https://www.thehindu.com/news/"
+		response=requests.get(url=url)
+		print(response.text)
+
+
+output:
+
+normal html contents will come
+
+pgm:
+
+
+		import requests
+		url="https://www.thehindu.com/news/"
+		response=requests.get(url=url)
+		print(type(response.text))
+		
+output:
+
+<class str>
+
+
+
+pgm:
+
+		import requests
+		url="https://www.thehindu.com/news/"
+		response=requests.get(url=url)
+		print(response.url)
+
+output:
+
+		anikam@manikam:~/pyy$ python3 class_dict_handle.py 
+		https://www.thehindu.com/news/
+
+
+							#status_code,response
+							
+program:
+
+		# import requests module
+		import requests
+
+		# Making a get request
+		response = requests.get('https://api.github.com/')
+
+		# print request object
+		print(response.url)
+
+		# print status code
+		print(response.status_code)
+		
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/pyy/test.py
+		https://api.github.com/
+		200
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
