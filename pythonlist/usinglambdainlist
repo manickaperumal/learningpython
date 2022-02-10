@@ -1,0 +1,11 @@
+pgm:
+
+		l=[0,5,10,15,20,25,30]
+		print(list(filter(lambda x: x%2==0,l)))
+		print(list(filter(lambda y :y%2!=0,l)))	
+		
+output:
+
+		[0, 10, 20, 30]
+		[5, 15, 25]		
+				
