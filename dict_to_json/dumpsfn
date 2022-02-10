@@ -1,0 +1,17 @@
+pgm:
+
+		import json
+		dict={"name":"manic","age":22,"clg":"kamaraj"}
+		print(dict)
+		print(type(dict))
+
+		json_format=json.dumps(dict)
+
+		with open("/home/manikam/json.json","w")as js:
+			js.write(json_format)
+			
+output:
+
+		manikam@manikam:~/projects/realpython$ /bin/python3 /home/manikam/projects/realpython/regex_handling.py
+		{'name': 'manic', 'age': 22, 'clg': 'kamaraj'}
+		<class 'dict'>
