@@ -1,4 +1,3 @@
-
 import requests
 import os
 from bs4 import BeautifulSoup
@@ -28,8 +27,8 @@ def topic(x):
             # print(sub)
             # print(heading)
             path="/home/manikam"
-            os.mkdir("/home/manikam/{}".format(heading))
-            file_write_path="/home/manikam/{}".format(heading)
+            os.mkdir("/home/manikam/physical/{}".format(heading))
+            file_write_path="/home/manikam/physical/{}".format(heading)
             # print(file_write_path)
 
 
@@ -50,45 +49,8 @@ def topic(x):
             # print(sub.text)
             
 
-topic("Air_sports")
-topic("Archery")
-topic("Climbing")
-topic("Cycling")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def smallheading(x):
-
-# # text=(soup.find("h3").find("span", attrs={"id":x}).find_next("ul"))
-# # print(text.text)
-
-
-
-
-# smallheading("Acrobatic_sports")
-# smallheading("Air_sports")
-# smallheading("Ball-over-net_games")
-
-# text=(soup.find("h3").find("span", attrs={"id":"Acrobatic_sports"}).find_next("ul"))
-# print(text.text)
+# topic("Air_sports")
+# topic("Archery")
+# topic("Climbing")
+# topic("Cycling")
+topic("Catching_games")
